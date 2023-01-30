@@ -10,6 +10,10 @@ body {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 .container {
     max-width: 1256px;
     margin: 0 auto;
@@ -29,19 +33,13 @@ body {
     min-height: 37px;
 }
 
-.logo {
-    font-size: 11px;
-    text-transform: uppercase;
-    color: #E3B873;
-}
-
 .site-navigation {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     margin: 0;
-    padding: 0;
+    padding: 0 0 0 20px;
 }
 
 /* стили ссылок в шапке */
@@ -49,18 +47,17 @@ body {
     margin-right: 47px;
 }
 
-.link-item {
-    color: #FFFFFF;
+.logo, .link-item {
     font-size: 11px;
-    text-decoration: none;
     text-transform: uppercase;
-}
-
-.link-item-gold {
     color: #E3B873;
 }
 
-.site-navigation-item:hover .link-item, .site-navigation-item:focus .link-item {
+.link-item {
+    color: #FFFFFF;
+}
+
+.nav-tel, .site-navigation-item:hover .link-item, .site-navigation-item:focus .link-item {
     color: #E3B873;
 }
 
@@ -109,13 +106,11 @@ button:hover {
 
 .title {
     font-family: 'Yeseva One', serif;
-    font-style: normal;
     font-weight: 400;
     font-size: 40px;
     line-height: 53px;
     text-transform: uppercase;
     color: #FFFFFF;
-    padding: 0;
     margin: 0 0 32px;
 }
 
@@ -128,7 +123,6 @@ button:hover {
     line-height: 36px;
     color: #FFFFFF;
     margin: 0 0 33px;
-    padding: 0;
 }
 
 .promo-buts {
@@ -188,7 +182,6 @@ button:hover {
 }
 
 .title-slider {
-    padding: 0;
     margin: 69px 0 34px;
     font-family: 'Yeseva One', serif;
     font-size: 27px;
@@ -199,7 +192,6 @@ button:hover {
 }
 
 .subtitle-slider {
-    padding: 0;
     margin: 0 0 58px;
     line-height: 27px;
     color: #FFFFFF;
@@ -223,7 +215,6 @@ button:hover {
     line-height: 25px;
     text-transform: uppercase;
     color: #E3B873;
-    padding: 0;
     margin: 0 0 9px;
 }
 
@@ -231,7 +222,6 @@ button:hover {
     font-size: 13px;
     line-height: 21px;
     color: #FFFFFF;
-    padding: 0;
     margin: 0;
 }
 
@@ -260,7 +250,6 @@ button:hover {
 }
 
 .slider-item {
-    text-decoration: none;
     font-family: 'Yeseva One', serif;
     font-size: 14px;
     line-height: 19px;
@@ -275,17 +264,21 @@ button:hover {
 
 .img-slider {
     background-image: url("img/admiral.jpg");
-    width: 679px;
+    max-width: 679px;
     height: 481px;
     background-position: 50% 1%;
 }
 
-.slider-navigation-item:hover .slider-item, .slider-navigation-item:focus .slider-item {
+.img-slider2 {
+    display: none;
+}
+
+.slider-navigation-item:hover .slider-item, .slider-navigation-item:focus .slider-item, .fantasies-nav-item:hover .fantasies-item, .fantasies-nav-item:focus .fantasies-item {
     color: #E3B873;
     border-bottom: 1px solid #E3B873;
 }
 
-.slider-navigation-item:first-child .slider-item {
+.slider-navigation-item:first-child .slider-item, .fantasies-nav-item:first-child .fantasies-item {
     color: #E3B873;
     border-bottom: 1px solid #E3B873;
 }
@@ -304,40 +297,13 @@ button:hover {
     height: 967px;
 }
 
-.title-frame, .title-type {
+.title-frame, .title-type, .title-clients {
     font-family: 'Yeseva One', serif;
     font-size: 20px;
     line-height: 28px;
     text-transform: uppercase;
     color: #FFFFFF;
-    margin: 0 0 21px;
-    padding: 0;
-}
-
-.logo-frame {
-    position: relative;
-}
-
-.logo-frame::before {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 32px;
-    top: 40%;
-    left: -120%;
-    background-color: #E3B873;
-    border-radius: 30px;
-}
-
-.logo-frame::after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 32px;
-    top: 40%;
-    left: 120%;
-    background-color: #E3B873;
-    border-radius: 30px;
+    margin: 0 0 20px;
 }
 
 img[alt*="Control"], img[alt*="repair"] {
@@ -406,7 +372,6 @@ img[alt*="preview"]::before {
     line-height: 37px;
     text-align: center;
     color: #363636;
-    padding: 0;
     margin: 0;
     position: relative;
     margin-bottom: 92px;
@@ -457,7 +422,20 @@ img[alt*="preview"]::before {
     background-color: #E3B873;
     color: #FFFFFF;
     font-size: 13px;
-    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 20px 75px 17px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    margin-bottom: 50px;
+}
+
+.feedback-but.second {
+    display: none;
+    background-color: #E3B873;
+    color: #FFFFFF;
+    font-size: 13px;
     text-transform: uppercase;
     color: #FFFFFF;
     padding: 20px 75px 17px;
@@ -524,7 +502,7 @@ input[id*="name"]::placeholder, input[id*="phone"]::placeholder {
 /* стили секции type */
 
 .type {
-    margin-bottom: 130px;
+    margin-bottom: 243px;
 }
 
 .type-wrapper {
@@ -533,7 +511,7 @@ input[id*="name"]::placeholder, input[id*="phone"]::placeholder {
     align-items: center;
 }
 
-.title-type {
+.title-type, .title-clients {
     color: #181818;
 }
 
@@ -573,7 +551,6 @@ input[id*="name"]::placeholder, input[id*="phone"]::placeholder {
     font-size: 18px;
     line-height: 25px;
     color: #363636;
-    padding: 0;
     margin: 0 0 13px;
 }
 
@@ -610,7 +587,6 @@ input[id*="name"]::placeholder, input[id*="phone"]::placeholder {
 .type-option-price-span {
     font-family: 'Yeseva One', serif;
     font-size: 18px;
-    line-height: 25px;
     text-transform: uppercase;
     color: #FFFFFF;
     text-align: center;
@@ -682,7 +658,6 @@ input[id*="name"]::placeholder, input[id*="phone"]::placeholder {
     line-height: 26px;
     text-align: center;
     color: #FFFFFF;
-    padding: 0;
     margin: 0 0 39px;
 }
 
@@ -699,16 +674,13 @@ input[id*="name"]::placeholder, input[id*="phone"]::placeholder {
 
 .request-but {
     font-size: 13px;
-    text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
     padding: 19px 22px;
     background-color: #E3B873;
-    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
     width: 213px;
     height: 51px;
     align-self: flex-end;
-    justify-items: flex-end;
 }
 
 label {
@@ -766,44 +738,307 @@ input[id*="nameRequest"]::placeholder, input[id*="phoneRequest"]::placeholder, i
     left: 650px;
 }
 
+.fantasies {
+    background-image: url("img/backround-fantasies.jpg");
+    background-size: cover;
+    margin: 0 0 111px;
+    height: 864px;
+}
+
 .fantasies-wrapper {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.photo-1 {
-    background-color: lightblue;
+.fantasies-title {
+    font-family: 'Yeseva One', serif;
+    font-size: 27px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: #E3B873;
+    margin: 0 0 47px;
+    padding: 131px 0 0;
 }
 
-.photo-2 {
-    background-color: lightcoral;
-}
-
-.photo-3 {
-    background-color: lightpink;
-}
-
-.photo-4 {
-    background-color: lightsalmon;
-}
-
-
-
-
-
-
-
-footer {
+.img-fantasies {
     display: none;
 }
 
-.main-footer-nav {
-    padding: 46px 0;
+.fantasies-nav {
+    list-style: none;
+    padding: 0 0 98px;
+    margin: 0;
 }
 
+.fantasies-nav-item:not(:last-child) {
+    margin-bottom: 25px;
+}
 
+.fantasies-item {
+    font-size: 18px;
+    color: #FFFFFF;
+}
 
+.blocks-fantasies-photo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.fantasies-photo-one, .fantasies-photo-two {
+    width: 354px;
+    height: 946px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fantasies-photo-one {
+    margin: -50px 43px 0 0;
+}
+
+.fantasies-photo-two {
+    margin-top: -120px;
+}
+
+.photo-1, .photo-3 {
+    margin-bottom: 43px;
+}
+
+.photo-1, .photo-4 {
+    flex-grow: 4;
+}
+
+.photo-2, .photo-3 {
+    flex-grow: 3;
+}
+
+img[alt*="fantasies"]:hover {
+    transform: scale(1.003);
+}
+
+/* стили для секции клиентов */
+
+.clients {
+    margin-bottom: 350px;
+}
+
+.clients-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img[alt*="clients"] {
+    margin: 0 auto 25px;
+}
+
+.client-description {
+    font-size: 18px;
+    line-height: 29px;
+    text-align: center;
+    color: #363636;
+    margin: 0 0 44px;
+}
+
+.client-reviews {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.client-review {
+    padding: 24px 32px 0 20px;
+    height: 428px;
+    width: 376px;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 54px;
+}
+
+.client-review-profile {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.client-review-pic {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    margin-right: 23px;
+}
+
+.client-review-pic.one {
+    background-image: url("img/client1.jpg");
+}
+
+.client-review-pic.two {
+    background-image: url("img/client2.jpg");
+}
+
+.client-review-pic.three {
+    background-image: url("img/client3.jpg");
+}
+
+.client-name {
+    font-family: 'Yeseva One', serif;
+    font-size: 18px;
+    line-height: 23px;
+    color: #181818;
+}
+
+.client-review-paragraph {
+    font-size: 13px;
+    line-height: 23px;
+    color: #959595;
+    margin: 0 0 32px;
+}
+
+.client-review .client-review-paragraph:first-of-type {
+    margin-bottom: 10px;
+}
+
+.client-review-indicators {
+    display: flex;
+    margin-left: -20px;
+}
+
+.client-review-indicators-meters, .client-review-indicators-days {
+    background-color: #E3B873;
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
+    width: 147px;
+    height: 54px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.client-review-indicators-meters {
+    border-right: 1px solid #FFFFFF;
+}
+
+.client-indicators {
+    font-family: 'Yeseva One', serif;
+    font-size: 17px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+/* стили для секции контакты */
+
+.contacts {
+    background-image: url("img/background-contacts.png");
+    background-size: cover;
+}
+
+.black {
+    background-color: black;
+}
+
+.contacts-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-margin-back {
+    margin-top: -220px;
+}
+
+.contact-form {
+    width: 883px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    background-color: #131313;
+    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
+    padding: 35px 182px;
+    margin-bottom: 52px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title-contact {
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0 0 53px;
+}
+
+.two-labels-of-third-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.label-request-block.child {
+    width: 231px;
+}
+
+.label-contact-block {
+    margin-bottom: 46px;
+}
+
+.check-feedback.five {
+    margin-bottom: 50px;
+}
+
+.request-but.five {
+    align-self: center;
+}
+
+.title-contact {
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #E3B873;
+    margin-bottom: 31px;
+}
+
+.socials {
+    display: flex;
+    width: 71px;
+    justify-content: space-between;
+    margin-bottom: 43px;
+}
+
+.social:hover {
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+.map {
+    width: 925px;
+    height: 465px;
+    background-image: url("img/map.png");
+    margin-bottom: 95px;
+}
+
+.img-map {
+    display: none;
+}
+
+footer {
+    background-color: #181818;
+}
+
+.footer-navigation {
+    padding: 48px 0;
+}
+
+.footer-contact, .footer-socials {
+    display: none;
+}
 
 @media screen and (max-width: 1264px) {
     .piggy {
@@ -817,6 +1052,23 @@ footer {
     }
     .nav-but {
         margin-left: 20px;
+    }
+    .title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .sub-title {
+        font-size: 20px;
+        line-height: 25px;
+    }
+}
+
+@media screen and (max-width: 1073px) {
+    .type {
+        margin-bottom: 100px;
+    }
+    .fantasies {
+        display: none;
     }
 }
 
@@ -847,6 +1099,9 @@ footer {
     }
     .label-feedback-block, .feedback-but {
         margin-bottom: 20px;
+    }
+    .slider-navigation-item:not(:last-child) {
+        margin-right: 20px;
     }
 }
 
