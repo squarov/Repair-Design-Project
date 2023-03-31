@@ -79,13 +79,52 @@
         text-align: center;
     }
     .img-slider2 {
-        display: block;
-        background-image: url("img/slider-mobile.jpg");
+        padding: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-image: url("img/admiral.jpg");
         min-width: 340px;
         min-height: 242px;
         background-size: cover;
         order: 3;
         margin-bottom: 37px;
+    }
+    .prev-mob, .next-mob {
+        position: relative;
+        width: 36px;
+        height: 36px;
+        background-color: #E3B873;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .prev-mob::before, .next-mob::before {
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 2px;
+        background-color: #FFFFFF;
+        top: 40%;
+        left: 30%;
+        transform: rotate(-45deg);
+    }
+    .prev-mob::after, .next-mob::after {
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 2px;
+        background-color: #FFFFFF;
+        top: 55%;
+        left: 30%;
+        transform: rotate(45deg);
+    }
+    .next-mob::after {
+        transform: rotate(-45deg);
+        left: 40%;
+    }
+    .next-mob::before {
+        transform: rotate(45deg);
+        left: 40%;
     }
     .img-fantasies {
         display: block;

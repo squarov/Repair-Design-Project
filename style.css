@@ -207,7 +207,7 @@ button:hover {
 }
 
 .time-cost {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 .title-for-description {
@@ -234,6 +234,73 @@ button:hover {
     margin-right: 64px;
 }
 
+.switches {
+    display: flex;
+    width: 206px;
+}
+
+.block-switch-left, .block-switch-right {
+    margin: auto 0;
+    height: 5px;
+    cursor: pointer;
+}
+
+.switch-left, .switch-right {
+    position: relative;
+    width: 40px;
+    height: 2px;
+    background-color: #FFFFFF;
+    margin: auto 0;
+}
+
+.switch-left::before, .switch-right::before {
+    position: absolute;
+    content: '';
+    top: 4px;
+    left: 0;
+    width: 11px;
+    height: 2px;
+    background-color: #FFFFFF;
+    transform: rotate(45deg);
+}
+
+.switch-left::after, .switch-right::after {
+    position: absolute;
+    content: '';
+    top: -4px;
+    left: 0;
+    width: 11px;
+    height: 2px;
+    background-color: #FFFFFF;
+    transform: rotate(-45deg);
+}
+
+.switch-right::before, .switch-right::after {
+    left: 30px;
+    transform: rotate(45deg);
+}
+
+.switch-right::before {
+    transform: rotate(-45deg);
+}
+
+.slider-buttons {
+    display: flex;
+    margin: 0 30px 0;
+}
+
+.slider-button {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-button:not(:last-child) {
+    margin-right: 18px;
+}
+
 /* правая часть слайдера */
 
 .option-slider {
@@ -257,6 +324,7 @@ button:hover {
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.3);
     padding-bottom: 5px;
+    cursor: pointer;
 }
 
 .slider-navigation-item:not(:last-child) {
@@ -279,7 +347,7 @@ button:hover {
     border-bottom: 1px solid #E3B873;
 }
 
-.slider-navigation-item:first-child .slider-item, .fantasies-nav-item:first-child .fantasies-item {
+.selected-project {
     color: #E3B873;
     border-bottom: 1px solid #E3B873;
 }
@@ -1044,6 +1112,60 @@ footer {
 @media screen and (max-width: 1264px) {
     .piggy {
         display: none;
+    }
+}
+
+@media screen and (max-width: 1164px) {
+    .switches {
+        display: none;
+    }
+    /* .img-slider {
+        display: none;
+    } */
+    .img-slider {
+        background-image: url("img/admiral.jpg");
+        max-width: 679px;
+        height: 481px;
+        padding: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .prev, .next {
+        position: relative;
+        width: 36px;
+        height: 36px;
+        background-color: #E3B873;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .prev::before, .next::before {
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 2px;
+        background-color: #FFFFFF;
+        top: 40%;
+        left: 30%;
+        transform: rotate(-45deg);
+    }
+    .prev::after, .next::after {
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 2px;
+        background-color: #FFFFFF;
+        top: 55%;
+        left: 30%;
+        transform: rotate(45deg);
+    }
+    .next::after {
+        transform: rotate(-45deg);
+        left: 40%;
+    }
+    .next::before {
+        transform: rotate(45deg);
+        left: 40%;
     }
 }
 
