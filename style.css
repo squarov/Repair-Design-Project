@@ -301,6 +301,10 @@ button:hover {
     margin-right: 18px;
 }
 
+.slider-button-check {
+    background-color: #FFFFFF;
+}
+
 /* правая часть слайдера */
 
 .option-slider {
@@ -343,6 +347,11 @@ button:hover {
 }
 
 .slider-navigation-item:hover .slider-item, .slider-navigation-item:focus .slider-item, .fantasies-nav-item:hover .fantasies-item, .fantasies-nav-item:focus .fantasies-item {
+    color: #E3B873;
+    border-bottom: 1px solid #E3B873;
+}
+
+.slider-item-active {
     color: #E3B873;
     border-bottom: 1px solid #E3B873;
 }
